@@ -42,4 +42,17 @@
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+
+  .flex {
+    display: flex;
+  }
+
+  .gap-1 {
+    gap: 1rem;
+  }
+
+  .grid {
+    display: grid;
+  }
 }
+

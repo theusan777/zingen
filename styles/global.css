@@ -76,20 +76,26 @@ a {
   color: inherit;
 }
 
-a:hover {
+a:not(.btn):hover {
   background: linear-gradient(
     90deg,
-    var(var(--brand-color-secondary)) 0%,
-    var(var(--brand-color-primary)) 100%
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
   );
 
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
 ul[role="list"]{
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
 }
 
 @media (width>= 80em) {

@@ -46,25 +46,26 @@
 
 .btn[aria-label] {
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    border-radius: inherit;
-    inset: 1.5px;
-    background-color: var(--bg-color);
-  }
-
-  &::after {
-    content: attr(aria-label);
-    background: var(--btn-bg-color);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    z-index: 1;
-  }
 }
 
-@media (width >= 80em) {
+.btn[aria-label]::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  inset: 1px;
+  background-color: var(--bg-color);
+}
+
+.btn[aria-label]::after {
+  content: attr(aria-label);
+  background: var(--btn-bg-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+
+@media screen and (min-width: 80rem) {
   .btn-sm {
     padding: .75rem 1.5rem;
     font-size: var(--fs-base);

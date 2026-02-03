@@ -37,7 +37,7 @@
   gap: 1rem;
 }
 
-@media (width >= 80em) {
+@media screen and (min-width: 80rem) {
   .container {
     --max-width: 80rem;
   }

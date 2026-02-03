@@ -1,5 +1,8 @@
 # Zingen 🎶
 
+![Zingen Preview](assets/preview/zingen-preview.png)
+
+
 Zingen is a modern and responsive landing page for a karaoke application, designed to showcase features, subscription plans, and encourage users to sing, practice, and share their performances.
 
 The project focuses on clean layout structure, modular CSS architecture, and a product-oriented design, simulating a real-world application landing page ready for presentation or commercialization.

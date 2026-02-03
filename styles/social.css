@@ -1,43 +1,27 @@
+/* Social icons: flat rules to ensure hover images display and transitions work */
 a.social {
-  --bg-img: "";
-  background-image: var(--bg-img);
   width: 1.5rem;
   height: 1.5rem;
-  display: block;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform 160ms ease, opacity 160ms ease, filter 160ms ease;
+  will-change: transform, opacity;
+} 
 
-  -webkit-background-clip: initial;
-  background-clip: initial;
+a.social[aria-label="tiktok"] { background-image: url("../assets/icons/tiktok.svg"); }
+a.social[aria-label="tiktok"]:hover, a.social[aria-label="tiktok"]:focus { background-image: url("../assets/icons/tiktok-hover.svg"); transform: translateY(-3px); } 
 
-    &[aria-label="tiktok"] {
-      --bg-img: url("../assets/icons/tiktok.svg");
 
-    &:hover {
-      --bg-img: url("../assets/icons/tiktok-hover.svg");
-    }
-  } 
+a.social[aria-label="instagram"] { background-image: url("../assets/icons/instagram.svg"); }
 
-   &[aria-label="instagram"] {
-      --bg-img: url("../assets/icons/instagram.svg");
+a.social[aria-label="instagram"]:hover, a.social[aria-label="instagram"]:focus { background-image: url("../assets/icons/instagram-hover.svg"); transform: translateY(-3px); }
+a.social[aria-label="twitter"] { background-image: url("../assets/icons/twitter.svg"); }
+a.social[aria-label="twitter"]:hover, a.social[aria-label="twitter"]:focus { background-image: url("../assets/icons/twitter-hover.svg"); transform: translateY(-3px); } 
 
-    &:hover {
-      --bg-img: url("../assets/icons/instagram-hover.svg");
-    }
-  } 
+a.social[aria-label="discord"] { background-image: url("../assets/icons/discord.svg"); }
+a.social[aria-label="discord"]:hover, a.social[aria-label="discord"]:focus { background-image: url("../assets/icons/discord-hover.svg"); transform: translateY(-3px); }
 
-   &[aria-label="twitter"] {
-      --bg-img: url("../assets/icons/twitter.svg");
-
-    &:hover {
-      --bg-img: url("../assets/icons/twitter-hover.svg");
-    }
-  } 
-
-   &[aria-label="discord"] {
-      --bg-img: url("../assets/icons/discord.svg");
-
-    &:hover {
-      --bg-img: url("../assets/icons/discord-hover.svg");
-    }
-  } 
-
-}
+/* Accessibility */
+a.social:focus { outline: 2px solid rgba(255,255,255,0.12); outline-offset: 3px; }

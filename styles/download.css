@@ -1,0 +1,56 @@
+#download {
+  .card {
+    padding: 3rem 1.5rem 15rem;
+    position: relative;
+    & > img {
+      width: 14.5rem;
+      position: absolute;
+      bottom: 0;
+      right: -3.5rem;
+    }
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column; /* mobile: vertical */
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* Desktop: alinhar botões horizontalmente como no print */
+  @media screen and (min-width: 80rem) {
+    .buttons {
+      flex-direction: row; /* horizontal */
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Ajuste de tamanho visual dos botões para ficar parecido com o print */
+    .buttons a img {
+      display: block;
+      max-height: 3rem;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 80rem) {
+    .card {
+      padding: 8.75rem 5rem;
+
+      & > div:nth-child(1) {
+        max-width: 40rem;
+      }
+
+      /* imagem ocupa a segunda coluna no desktop (mantida como sobresaliente) */
+      & > img {
+        position: absolute;
+        width: 29.125rem;
+        bottom: 0;
+        right: -6rem;
+        z-index: 2;
+      }
+    }
+  }
+}

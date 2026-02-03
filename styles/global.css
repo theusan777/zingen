@@ -46,6 +46,14 @@ html {
   font-size: var(--fs-base);
   line-height: 1.6;
   color: var(--text-color-primary);
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Ensure smooth scrolling works across browsers when clicking anchor links */
+body {
+  scroll-behavior: smooth;
 }
 
 body {
